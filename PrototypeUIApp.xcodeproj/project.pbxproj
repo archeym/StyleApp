@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212E0AFF1F1A3F59001F1036 /* UIImageViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212E0AFE1F1A3F59001F1036 /* UIImageViewX.swift */; };
 		213678161F0D5ECD006DDF50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213678151F0D5ECD006DDF50 /* AppDelegate.swift */; };
 		2136781B1F0D5ECD006DDF50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 213678191F0D5ECD006DDF50 /* Main.storyboard */; };
 		2136781D1F0D5ECD006DDF50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2136781C1F0D5ECD006DDF50 /* Assets.xcassets */; };
@@ -15,12 +16,16 @@
 		2136782D1F0D6112006DDF50 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2136782C1F0D6112006DDF50 /* TableViewCell.swift */; };
 		2136782F1F0D6398006DDF50 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2136782E1F0D6398006DDF50 /* Data.swift */; };
 		213678311F0D6552006DDF50 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213678301F0D6552006DDF50 /* Model.swift */; };
+		217766401F190DC1002CD833 /* DayWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2177663F1F190DC1002CD833 /* DayWeather.swift */; };
+		217766421F191BAC002CD833 /* Oxygen-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 217766411F191BAC002CD833 /* Oxygen-Regular.ttf */; };
+		217766441F191BBE002CD833 /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 217766431F191BBE002CD833 /* Ubuntu-Regular.ttf */; };
 		21DE32DD1F165075005D06FA /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE32DC1F165075005D06FA /* UIButtonX.swift */; };
 		21DE32DF1F16530A005D06FA /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE32DE1F16530A005D06FA /* FloatingButton.swift */; };
 		21DE32E11F166C04005D06FA /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE32E01F166C04005D06FA /* UIViewX.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		212E0AFE1F1A3F59001F1036 /* UIImageViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewX.swift; sourceTree = "<group>"; };
 		213678121F0D5ECD006DDF50 /* PrototypeUIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrototypeUIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		213678151F0D5ECD006DDF50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2136781A1F0D5ECD006DDF50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -31,6 +36,9 @@
 		2136782C1F0D6112006DDF50 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		2136782E1F0D6398006DDF50 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		213678301F0D6552006DDF50 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2177663F1F190DC1002CD833 /* DayWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayWeather.swift; sourceTree = "<group>"; };
+		217766411F191BAC002CD833 /* Oxygen-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxygen-Regular.ttf"; sourceTree = "<group>"; };
+		217766431F191BBE002CD833 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
 		21DE32DC1F165075005D06FA /* UIButtonX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
 		21DE32DE1F16530A005D06FA /* FloatingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		21DE32E01F166C04005D06FA /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
@@ -82,6 +90,7 @@
 			children = (
 				2136782E1F0D6398006DDF50 /* Data.swift */,
 				213678301F0D6552006DDF50 /* Model.swift */,
+				2177663F1F190DC1002CD833 /* DayWeather.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -108,6 +117,8 @@
 		213678321F0D6F9D006DDF50 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				217766431F191BBE002CD833 /* Ubuntu-Regular.ttf */,
+				217766411F191BAC002CD833 /* Oxygen-Regular.ttf */,
 				21DE32DE1F16530A005D06FA /* FloatingButton.swift */,
 			);
 			name = Resources;
@@ -118,6 +129,7 @@
 			children = (
 				21DE32DC1F165075005D06FA /* UIButtonX.swift */,
 				21DE32E01F166C04005D06FA /* UIViewX.swift */,
+				212E0AFE1F1A3F59001F1036 /* UIImageViewX.swift */,
 			);
 			name = Designables;
 			sourceTree = "<group>";
@@ -185,6 +197,8 @@
 				213678201F0D5ECD006DDF50 /* LaunchScreen.storyboard in Resources */,
 				2136781D1F0D5ECD006DDF50 /* Assets.xcassets in Resources */,
 				2136781B1F0D5ECD006DDF50 /* Main.storyboard in Resources */,
+				217766441F191BBE002CD833 /* Ubuntu-Regular.ttf in Resources */,
+				217766421F191BAC002CD833 /* Oxygen-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +210,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				213678311F0D6552006DDF50 /* Model.swift in Sources */,
+				212E0AFF1F1A3F59001F1036 /* UIImageViewX.swift in Sources */,
+				217766401F190DC1002CD833 /* DayWeather.swift in Sources */,
 				21DE32E11F166C04005D06FA /* UIViewX.swift in Sources */,
 				2136782D1F0D6112006DDF50 /* TableViewCell.swift in Sources */,
 				21DE32DF1F16530A005D06FA /* FloatingButton.swift in Sources */,
@@ -329,7 +345,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V8T6EH88N4;
 				INFOPLIST_FILE = PrototypeUIApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Archie.PrototypeUIApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -343,7 +359,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V8T6EH88N4;
 				INFOPLIST_FILE = PrototypeUIApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Archie.PrototypeUIApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
