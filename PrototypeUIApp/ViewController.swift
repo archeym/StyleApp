@@ -23,11 +23,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var weatherImageView: UIImageView!
     
+    @IBOutlet weak var sideMenu: UIView!
+    
+    @IBOutlet weak var menuCurveImageView: UIImageView!
+    @IBOutlet weak var screenCoverButton: UIButton!
+    
+    @IBOutlet weak var profileImageView: UIImageViewX!
+    @IBOutlet weak var userButton: UIButton!
+    @IBOutlet weak var noteButton: UIButton!
+    @IBOutlet weak var photoButton: UIButton!
+    @IBOutlet weak var callendarButton: UIButton!
+    @IBOutlet weak var newsButton: UIButton!
+    
     var tableData : [Model] = []
     var dayWeatherDate: DayWeather?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        menuCurveImageView.image = #imageLiteral(resourceName: "MenuCurve")
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -41,16 +54,83 @@ class ViewController: UIViewController {
                 
             }
         }
-        
         Data.getData{ (data) in
             self.tableData = data
             self.tableView.reloadData()
             self.animateTableCell()
             
         }
+        hideSideMenu()
         closeMenu()
         setupAnimationControls()
     }
+    
+    @IBAction func menuTapped(_ sender: Any) {
+        showSideMenu()
+    }
+    
+    func showSideMenu() {
+        sideMenu.isHidden = false
+        UIView.animate(withDuration: 0.7, animations: {
+            self.sideMenu.alpha = 1
+            self.screenCoverButton.alpha = 1
+        })
+        
+        
+        UIView.animate(withDuration: 0.4, delay: 0.1, options: [.curveEaseOut, .allowUserInteraction], animations: {
+            self.userButton.transform = .identity
+            self.callendarButton.transform = .identity
+        })
+        
+        UIView.animate(withDuration: 0.4, delay: 0, options: [.curveEaseOut, .allowUserInteraction], animations: {
+            self.noteButton.transform = .identity
+            self.photoButton.transform = .identity
+        })
+        
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveEaseOut, animations: {
+            self.menuCurveImageView.transform = .identity
+        })
+        
+        UIView.animate(withDuration: 0.4, delay: 0.2, options: [.curveEaseOut, .allowUserInteraction], animations: {
+            self.profileImageView.transform = .identity
+            self.newsButton.transform = .identity
+        })
+    }
+    
+    @IBAction func screenCoverTapped(_ sender: Any) {
+        hideSideMenu()
+    }
+    
+    func hideSideMenu(){
+        UIView.animate(withDuration: 0.7, animations: {
+            self.sideMenu.alpha = 0
+            self.screenCoverButton.alpha = 0
+        })
+        
+        UIView.animate(withDuration: 0.4, delay: 0, options: [.curveEaseOut, .allowUserInteraction], animations: {
+            self.profileImageView.transform = CGAffineTransform(translationX: -self.sideMenu.frame.width, y: 0)
+            self.newsButton.transform = CGAffineTransform(translationX: -self.sideMenu.frame.width, y: 0)
+        })
+        
+        UIView.animate(withDuration: 0.4, delay: 0.1, options: [.curveEaseOut, .allowUserInteraction], animations: {
+            self.userButton.transform = CGAffineTransform(translationX: -self.sideMenu.frame.width, y: 0)
+            self.callendarButton.transform = CGAffineTransform(translationX: -self.sideMenu.frame.width, y: 0)
+        })
+        
+        UIView.animate(withDuration: 0.4, delay: 0.1, options: [.curveEaseOut, .allowUserInteraction], animations: {
+            self.noteButton.transform = CGAffineTransform(translationX: -self.sideMenu.frame.width, y: 0)
+            self.photoButton.transform = CGAffineTransform(translationX: -self.sideMenu.frame.width, y: 0)
+        }) { success in
+            self.sideMenu.isHidden = true
+        }
+        
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveEaseOut, animations: {
+            self.menuCurveImageView.transform = CGAffineTransform(translationX: -self.menuCurveImageView.frame.width, y: 0)
+            
+        })
+    }
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
