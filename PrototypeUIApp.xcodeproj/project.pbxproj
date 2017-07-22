@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210627F91F238DB200EF80FB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210627F81F238DB200EF80FB /* SignUpViewController.swift */; };
+		210627FB1F2390CF00EF80FB /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210627FA1F2390CF00EF80FB /* DesignableTextField.swift */; };
 		212E0AFF1F1A3F59001F1036 /* UIImageViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212E0AFE1F1A3F59001F1036 /* UIImageViewX.swift */; };
 		213678161F0D5ECD006DDF50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213678151F0D5ECD006DDF50 /* AppDelegate.swift */; };
 		2136781B1F0D5ECD006DDF50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 213678191F0D5ECD006DDF50 /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		210627F81F238DB200EF80FB /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		210627FA1F2390CF00EF80FB /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		212E0AFE1F1A3F59001F1036 /* UIImageViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewX.swift; sourceTree = "<group>"; };
 		213678121F0D5ECD006DDF50 /* PrototypeUIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrototypeUIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		213678151F0D5ECD006DDF50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				2136782A1F0D60C0006DDF50 /* ViewController.swift */,
+				210627F81F238DB200EF80FB /* SignUpViewController.swift */,
 				213678151F0D5ECD006DDF50 /* AppDelegate.swift */,
 			);
 			name = Controller;
@@ -129,6 +134,7 @@
 			children = (
 				21DE32DC1F165075005D06FA /* UIButtonX.swift */,
 				21DE32E01F166C04005D06FA /* UIViewX.swift */,
+				210627FA1F2390CF00EF80FB /* DesignableTextField.swift */,
 				212E0AFE1F1A3F59001F1036 /* UIImageViewX.swift */,
 			);
 			name = Designables;
@@ -209,12 +215,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				210627F91F238DB200EF80FB /* SignUpViewController.swift in Sources */,
 				213678311F0D6552006DDF50 /* Model.swift in Sources */,
 				212E0AFF1F1A3F59001F1036 /* UIImageViewX.swift in Sources */,
 				217766401F190DC1002CD833 /* DayWeather.swift in Sources */,
 				21DE32E11F166C04005D06FA /* UIViewX.swift in Sources */,
 				2136782D1F0D6112006DDF50 /* TableViewCell.swift in Sources */,
 				21DE32DF1F16530A005D06FA /* FloatingButton.swift in Sources */,
+				210627FB1F2390CF00EF80FB /* DesignableTextField.swift in Sources */,
 				21DE32DD1F165075005D06FA /* UIButtonX.swift in Sources */,
 				2136782B1F0D60C0006DDF50 /* ViewController.swift in Sources */,
 				213678161F0D5ECD006DDF50 /* AppDelegate.swift in Sources */,

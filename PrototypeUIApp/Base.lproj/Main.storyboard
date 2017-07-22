@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Oxygen-Regular.ttf">
             <string>Oxygen-Regular</string>
+        </array>
+        <array key="Raleway-LightItalic.ttf">
+            <string>Raleway-LightItalic</string>
         </array>
         <array key="Ubuntu-Regular.ttf">
             <string>Ubuntu-Regular</string>
@@ -315,6 +317,9 @@
                                 <rect key="frame" x="320" y="28" width="40" height="40"/>
                                 <color key="tintColor" red="0.92124956849999995" green="0.92194885019999995" blue="0.92135781049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="search"/>
+                                <connections>
+                                    <segue destination="j9g-Vb-ms1" kind="presentation" modalPresentationStyle="overCurrentContext" id="qp7-rC-xcE"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9RV-5b-6tl">
                                 <rect key="frame" x="201" y="76" width="158" height="107"/>
@@ -363,7 +368,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 July 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGb-8p-S2z">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22 July 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGb-8p-S2z">
                                         <rect key="frame" x="8" y="63" width="142" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="Ugm-J8-lV2"/>
@@ -560,7 +565,161 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="373.60000000000002" y="118.29085457271366"/>
+            <point key="canvasLocation" x="348" y="118"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="Vsh-6T-Na2">
+            <objects>
+                <viewController id="j9g-Vb-ms1" customClass="SignUpViewController" customModule="PrototypeUIApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <visualEffectView key="view" opaque="NO" contentMode="scaleToFill" id="R8O-h8-ycp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Wp1-pM-UAB">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcr-bJ-BAO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <connections>
+                                        <action selector="dismissPopUp:" destination="j9g-Vb-ms1" eventType="touchUpInside" id="MfZ-ZL-jPy"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uIh-aP-nhl" customClass="DesignView" customModule="PrototypeUIApp" customModuleProvider="target">
+                                    <rect key="frame" x="58" y="189" width="260" height="132"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gJ3-tp-eOC" customClass="DesignableTextField" customModule="PrototypeUIApp" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="51" width="230" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.46713140679999998" green="0.5" blue="0.43465137599999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="tintColor" red="0.93426281349999996" green="1" blue="0.86930275199999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="search"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                    <real key="value" value="63"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z98-7l-8EJ" customClass="UIButtonX" customModule="PrototypeUIApp" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="90" width="230" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Raleway-LightItalic" family="Raleway" pointSize="25"/>
+                                            <state key="normal" title="Search">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="animateDelay">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="singUp:" destination="j9g-Vb-ms1" eventType="touchUpInside" id="6Om-sG-0Qc"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.59473305939999999" green="0.60310363769999997" blue="0.487329185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="132" id="3qU-Y0-6DX"/>
+                                        <constraint firstAttribute="width" constant="260" id="TCn-I8-KDV"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <integer key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHI-dJ-eJX" customClass="DesignView" customModule="PrototypeUIApp" customModuleProvider="target">
+                                    <rect key="frame" x="137.5" y="137" width="100" height="100"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="kv5-yc-OJn" customClass="UIImageViewX" customModule="PrototypeUIApp" customModuleProvider="target">
+                                            <rect key="frame" x="32.5" y="32.5" width="35" height="35"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="AY3-5N-uR7"/>
+                                                <constraint firstAttribute="width" constant="35" id="Fv0-b8-wib"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="17.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                    <color key="value" red="0.91188871260000004" green="1" blue="0.86135161149999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.59473305939999999" green="0.60310363769999997" blue="0.487329185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="D00-rq-qpO"/>
+                                        <constraint firstItem="kv5-yc-OJn" firstAttribute="centerY" secondItem="VHI-dJ-eJX" secondAttribute="centerY" id="LOa-Va-mUM"/>
+                                        <constraint firstAttribute="width" constant="100" id="Nnb-us-CNs"/>
+                                        <constraint firstItem="kv5-yc-OJn" firstAttribute="centerX" secondItem="VHI-dJ-eJX" secondAttribute="centerX" id="buD-qj-HlT"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="50"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="uIh-aP-nhl" firstAttribute="centerY" secondItem="Wp1-pM-UAB" secondAttribute="centerY" constant="-78.5" id="2V7-He-n5h"/>
+                                <constraint firstItem="VHI-dJ-eJX" firstAttribute="centerX" secondItem="Wp1-pM-UAB" secondAttribute="centerX" id="4rs-Bp-eBS"/>
+                                <constraint firstItem="rcr-bJ-BAO" firstAttribute="top" secondItem="Wp1-pM-UAB" secondAttribute="top" id="57p-Xk-g0X"/>
+                                <constraint firstAttribute="trailing" secondItem="rcr-bJ-BAO" secondAttribute="trailing" id="9N5-w7-p16"/>
+                                <constraint firstItem="uIh-aP-nhl" firstAttribute="centerX" secondItem="Wp1-pM-UAB" secondAttribute="centerX" id="U9U-Up-YOL"/>
+                                <constraint firstItem="uIh-aP-nhl" firstAttribute="top" secondItem="VHI-dJ-eJX" secondAttribute="bottom" constant="-48" id="XBk-1S-zhl"/>
+                                <constraint firstItem="rcr-bJ-BAO" firstAttribute="leading" secondItem="Wp1-pM-UAB" secondAttribute="leading" id="q3i-88-Bv5"/>
+                                <constraint firstAttribute="bottom" secondItem="rcr-bJ-BAO" secondAttribute="bottom" id="sTx-KJ-gKM"/>
+                            </constraints>
+                        </view>
+                        <blurEffect style="light"/>
+                    </visualEffectView>
+                    <connections>
+                        <outlet property="usernamTextField" destination="gJ3-tp-eOC" id="kcA-CE-Ym9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RqL-p7-aOl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108" y="117.39130434782609"/>
         </scene>
     </scenes>
     <resources>
